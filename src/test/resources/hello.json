@@ -1,0 +1,15 @@
+{
+  "scenarioName": "GIVEN- the GitHub REST end point, WHEN- I invoke GET, THEN- I will receive the 200 status with body",
+  "steps": [
+    {
+      "name": "get_user_details",
+      "url": "http://localhost:8080/hello",
+      "method": "GET",
+      "request": {
+      },
+      "verify": {
+        "status": 200
+      }
+    }
+  ]
+}
