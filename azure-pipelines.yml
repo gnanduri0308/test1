@@ -10,17 +10,17 @@ steps:
   #displayName: Maven build
   inputs:
       mavenPomFile: 'pom.xml'
-        goals: 'package'
-        publishJUnitResults: true
-        testResultsFiles: '**/surefire-reports/TEST-*.xml'
-        testRunTitle: 'Running unit tests!!!'
-        codeCoverageToolOption: 'JaCoCo'
-        javaHomeOption: 'JDKVersion'
-        jdkVersionOption: '1.11'
-        mavenVersionOption: 'Default'
-        mavenAuthenticateFeed: false
-        effectivePomSkip: false
-        sonarQubeRunAnalysis: false
+      goals: 'package'
+      publishJUnitResults: true
+      testResultsFiles: '**/surefire-reports/TEST-*.xml'
+      testRunTitle: 'Running unit tests!!!'
+      codeCoverageToolOption: 'JaCoCo'
+      javaHomeOption: 'JDKVersion'
+      jdkVersionOption: '1.11'
+      mavenVersionOption: 'Default'
+      mavenAuthenticateFeed: false
+      effectivePomSkip: false
+      sonarQubeRunAnalysis: false
 
 # Setup docker-compose simulation environment. Environment includes schema registry, zookeeper, kafka
 and SUT
