@@ -1,6 +1,12 @@
+  trigger:
+  - master
+
+  pool:
+    vmImage: 'Ubuntu-16.04'
 # ...Stage and Job setup
 # Perform unit and integration testing with normal Maven package or verify goal
--task: Maven@3
+  steps:
+- task: Maven@3
 displayName: Maven build
 inputs:
 mavenPomFile: 'pom.xml'
