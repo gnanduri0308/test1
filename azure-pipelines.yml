@@ -24,7 +24,7 @@ steps:
 
 # Setup docker-compose simulation environment. Environment includes schema registry, zookeeper, kafka
 and SUT
-# Consider putting docker compose and e2e testing into its own Pipeline stage
+steps:
 - task: DockerCompose@0
 #displayName: Setup E2E Environment
   inputs:
@@ -36,6 +36,7 @@ and SUT
     # Perform end-to-end test using zerocode or equivalent framework
 
 # After end-to-end testing completes, teardown simulation environment
+steps:
 - task: DockerCompose@0
 #displayName: Teardown E2E environment
   inputs:
