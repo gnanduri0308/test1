@@ -7,7 +7,7 @@ pool:
 # Perform unit and integration testing with normal Maven package or verify goal
 steps:
 - task: Maven@3
-    displayName: Maven build
+    #displayName: Maven build
     inputs:
         mavenPomFile: 'pom.xml'
         goals: 'package'
