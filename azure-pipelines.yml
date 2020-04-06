@@ -14,15 +14,3 @@ steps:
     dockerComposeFile: '**/docker-compose.yml'
     action: 'Run a Docker Compose command'
     dockerComposeCommand: 'up -d'
-    # Perform end-to-end test using zerocode or equivalent framework
-
-# After end-to-end testing completes, teardown simulation environment
-steps:
-- task: DockerCompose@0
-#displayName: Teardown E2E environment
-  inputs:
-    containerregistrytype: 'Container Registry'
-    dockerRegistryEndpoint: 'Docker Hub'
-    dockerComposeFile: '**/docker-compose.yml'
-    action: 'Run a Docker Compose command'
-    dockerComposeCommand: 'down'
