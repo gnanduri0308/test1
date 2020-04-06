@@ -1,6 +1,6 @@
 # ...Stage and Job setup
 # Perform unit and integration testing with normal Maven package or verify goal
-- task: Maven@3
+-task: Maven@3
 displayName: Maven build
 inputs:
 mavenPomFile: 'pom.xml'
