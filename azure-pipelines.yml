@@ -9,7 +9,7 @@ steps:
 - task: Maven@3
     #displayName: Maven build
     inputs:
-        mavenPomFile: 'pom.xml'
+      mavenPomFile: 'pom.xml'
         goals: 'package'
         publishJUnitResults: true
         testResultsFiles: '**/surefire-reports/TEST-*.xml'
