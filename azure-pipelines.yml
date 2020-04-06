@@ -1,26 +1,26 @@
-  trigger:
-  - master
+trigger:
+- master
 
-  pool:
+pool:
     vmImage: 'Ubuntu-16.04'
 # ...Stage and Job setup
 # Perform unit and integration testing with normal Maven package or verify goal
-  steps:
+steps:
 - task: Maven@3
-displayName: Maven build
-inputs:
-mavenPomFile: 'pom.xml'
-goals: 'package'
-publishJUnitResults: true
-testResultsFiles: '**/surefire-reports/TEST-*.xml'
-testRunTitle: 'Running unit tests!!!'
-codeCoverageToolOption: 'JaCoCo'
-javaHomeOption: 'JDKVersion'
-jdkVersionOption: '1.11'
-mavenVersionOption: 'Default'
-mavenAuthenticateFeed: false
-effectivePomSkip: false
-sonarQubeRunAnalysis: false
+    displayName: Maven build
+    inputs:
+        mavenPomFile: 'pom.xml'
+        goals: 'package'
+        publishJUnitResults: true
+        testResultsFiles: '**/surefire-reports/TEST-*.xml'
+        testRunTitle: 'Running unit tests!!!'
+        codeCoverageToolOption: 'JaCoCo'
+        javaHomeOption: 'JDKVersion'
+        jdkVersionOption: '1.11'
+        mavenVersionOption: 'Default'
+        mavenAuthenticateFeed: false
+        effectivePomSkip: false
+        sonarQubeRunAnalysis: false
 
 # Setup docker-compose simulation environment. Environment includes schema registry, zookeeper, kafka
 and SUT
