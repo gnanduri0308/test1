@@ -15,6 +15,7 @@ mavenVersionOption: 'Default'
 mavenAuthenticateFeed: false
 effectivePomSkip: false
 sonarQubeRunAnalysis: false
+
 # Setup docker-compose simulation environment. Environment includes schema registry, zookeeper, kafka
 and SUT
 # Consider putting docker compose and e2e testing into its own Pipeline stage
